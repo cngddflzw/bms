@@ -10,23 +10,27 @@
             $this->pageData["ownerList"] = $this->loadConfig("ownerList");
             $billMod = $this->loadModel("billModel");
 
-            if(empty($_POST)) {
-                $_SESSION["duplicated"] = rand(0, 100000);  #防止重复提交
-                $this->pageData["duplicated"] = $_SESSION["duplicated"];
-            } else {
+            if(!empty($_POST)) {
                 $duplicated = $_POST["duplicated"];
 
                 #如果页面数字和SESSION数字一样，说明不是重复提交，将提交内容插入数据库
-                if($duplicated !== null && $duplicated == $_SESSION["duplicated"]) {
+                // if($duplicated !== null && $duplicated == $_SESSION["duplicated"]) {
                     $bill = $_POST["bill"];
                     $billMod->addBill($bill);
-                    $_SESSION["duplicated"] = rand(0, 100000);  #防止重复提交
-                    $this->pageData["duplicated"] = $_SESSION["duplicated"];
-                }
+                // }
             }
+            $_SESSION["duplicated"] = rand(0, 100000);  #防止重复提交
+            $this->pageData["duplicated"] = $_SESSION["duplicated"];        
             $billList = $billMod->getBills();
             $this->pageData["billList"] = $billList;
             $this->displayView("index", $this->pageData);
+        }
+
+        public function test() {
+            session_start();
+            echo "start";
+            var_dump($_SESSION);
+            echo "end";
         }
 
         public function countBill() {

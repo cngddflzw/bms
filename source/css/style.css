@@ -1,0 +1,358 @@
+*
+{
+	padding:0;
+	margin:0;
+}
+
+a
+{
+	text-decoration:none;
+	outline:none;
+	color:#333;
+}
+
+a:hover
+{
+    text-decoration:underline;
+    color:Black;
+}
+
+p
+{
+	line-height:28px;
+}
+
+body
+{
+	font-family:'Tahoma';
+	font-size:12px;
+	background:url('background.gif') no-repeat #f0f0f0;
+	padding:24px;
+	color:#333;
+}
+
+h1
+{
+	font-size:26px;
+}
+
+h2
+{
+	font-size:22px;
+}
+
+h3
+{
+	font-size:20px;
+}
+
+h4
+{
+	font-size:16px;
+}
+
+h5
+{
+	font-size:14px;
+}
+
+h6
+{
+	font-size:12px;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+	margin:8px 0px;
+}
+
+select, input[type="text"], input[type="password"]
+{
+	padding:4px;
+	border:1px solid #ddd;
+	width:400px;
+	border-radius:4px;
+	margin:8px;
+}
+
+input[type="radio"], input[type="checkbox"], input[type="file"]
+{
+    margin:8px;
+}
+
+select
+{
+    width:410px;   
+}
+
+textarea, .editor, .mtext
+{
+	padding:4px;
+	border:1px solid #ddd;
+	width:500px;
+	height:375px;
+	border-radius:4px;
+	margin:8px;
+}
+
+button
+{
+	background:url('button.gif') repeat-x #459300;
+	padding:4px 8px;
+	border:1px solid #459300;
+	color: white;
+	border-radius:4px;
+	margin:4px;
+	cursor:pointer;
+}
+
+.warn, .info, .ok, .error
+{
+    position:relative;
+    color: #666452;
+    padding:12px 12px 12px 36px;
+	border-radius:4px;
+	margin:12px 0px;
+}
+
+.warn
+{	
+	background:url('icons/warn.png') #FFFBCC 12px 12px no-repeat;
+	border:1px solid #E6DB55;	
+}
+
+.info
+{
+	background:url('icons/info.png') #DBE3FF 12px 12px no-repeat;
+	border:1px solid #A2B4EE;
+}
+
+.ok
+{
+	background:url('icons/ok.png') #D5FFCE 12px 12px no-repeat;
+	border:1px solid #9ADF8F;
+}
+
+.error
+{
+	background:url('icons/error.png') #FFCECE 12px 12px no-repeat;
+	border:1px solid #DF8F8F;
+}
+
+.close
+{
+	position:absolute;
+	width:8px;
+	height:8px;
+	right:4px;
+	top:4px;
+	background:url('icons/small_cross.png') no-repeat;
+	cursor:pointer;
+}
+
+.left
+{
+    text-align:left;
+}
+
+.center
+{
+    text-align:center;
+}
+
+.right
+{
+    text-align:right;
+}
+
+.box
+{
+	position:relative;
+	margin:16px 0px;
+	border:1px solid #ccc;
+	border-radius:8px;
+	background:url('menu.gif') repeat-x white 0px 1px;
+	overflow:hidden;
+}
+
+.box .title
+{
+	height:40px;
+	line-height:42px;
+	padding:0px 16px;
+	border-bottom:1px solid #ccc;
+	margin:0px;
+}
+
+.box .tab
+{
+	position:absolute;
+	right:24px;
+	top:12px;
+}
+
+.box .tab span
+{
+	display:inline-block;
+	padding:0px 8px;
+	height:28px;
+	line-height:28px;
+	cursor:pointer;
+}
+
+.box .tab span a
+{
+    color:#333;
+}
+
+.box .tab .checked
+{
+	border:1px solid #ccc;
+	border-bottom:none;
+	background:white;
+	border-radius:4px;
+	border-bottom-left-radius:0;
+	border-bottom-right-radius:0;
+}
+
+.context
+{
+	padding:16px;
+}
+
+.content
+{
+	overflow:hidden;
+	background:url('background.gif') no-repeat;
+	padding:24px;
+	padding-bottom:0px;
+	min-height:620px;
+}
+
+.footer
+{
+	padding:12px 0px;
+	margin-top:24px;
+	font-size:12px;
+	color:#555;
+	border-top:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+	text-align:center;
+}
+
+.footer a
+{
+	color:#57A000;
+}
+
+table
+{
+	border-collapse:collapse;
+	width:100%;
+	border-bottom:1px solid #ddd;
+}
+
+table thead tr td
+{
+	border-bottom:1px solid #ddd;
+}
+
+table thead tr td a
+{
+    color:#666;
+}
+
+table thead tr td a:hover
+{
+    color:#444;
+}
+
+table thead td
+{
+	height:40px;
+	text-align:center;
+	font-size:14px;
+	font-weight:bold;
+	color:#666;
+	padding:0px 8px;
+}
+
+table tbody td
+{
+	height:40px;
+	text-align:center;
+	padding:0px 8px;
+	color:#555;
+}
+
+table tbody a, table tbody a:hover
+{
+    color:#57A000;
+}
+
+table tbody tr:nth-child(odd), .odd
+{
+	background-color:#f3f3f3;
+}
+
+.pageinfo
+{
+	text-align:right;
+	margin:16px 0px;
+}
+
+.pageinfo a
+{
+	color:#57A000;
+}
+
+.pageinfo select
+{
+	width:80px;
+}
+
+.control
+{
+	padding:8px;
+	border-top:1px solid #ddd;
+	border-bottom:1px solid #ddd;
+	margin:4px 0px 12px 0px;
+	background:#f3f3f3;
+}
+
+.field-validation-error
+{
+	display:inline-block;
+	background:url('icons/error.png') no-repeat 0px 10px;
+	padding:4px 4px 4px 22px;
+	color:#DF4F4F;
+}
+
+.input-validation-error
+{
+    background:#ffeeee;   
+}
+
+.checkbox, .checkbox input
+{
+    width:24px;
+}
+
+input.short, input.datetime
+{
+    width:100px;
+    text-align:center;
+}
+
+div.editable
+{
+	border:solid 2px #e6e6fa;
+	padding:16px;
+	background:white;
+	margin:8px;
+}
+
+div.editable:hover
+{
+    border:solid 2px #778899;
+}

@@ -22,7 +22,7 @@ $path = dirname(__FILE__) . DIRECTORY_SEPARATOR . "controllers" . DIRECTORY_SEPA
 for ($i = 0; $i < count($uriArray); $i++) {
     $val = $uriArray[$i];
 
-    if (is_dir($path . $val)) { #当url路径是文件夹，不全文件夹
+    if (is_dir($path . $val)) { #当url路径是文件夹，补全文件夹
         $path .= $val . "/";
         continue;
     } elseif (file_exists($path . $val . ".php")) { #引入url类并执行其内部方法
