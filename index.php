@@ -16,7 +16,6 @@ $pattern = "@^(\W)@";    #去掉开头的特殊符号
 $requestUri = preg_replace($pattern, "", $requestUri);
 $uriArray = explode("/", $requestUri);
 $executeFlag = false;
-
 #检查url路径
 $path = dirname(__FILE__) . DIRECTORY_SEPARATOR . "controllers" . DIRECTORY_SEPARATOR;
 for ($i = 0; $i < count($uriArray); $i++) {

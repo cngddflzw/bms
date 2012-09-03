@@ -25,14 +25,14 @@ DROP TABLE IF EXISTS `bill`;
 CREATE TABLE `bill` (
   `billId` int(11) NOT NULL AUTO_INCREMENT,
   `payer` enum('刘振威','叶扬帆') NOT NULL,
-  `totalPrice` float NOT NULL COMMENT '金额',
+  `totalPrice` decimal(20,1) NOT NULL COMMENT '金额',
   `date` date NOT NULL COMMENT '账单日期',
   `owner` enum('公共','刘振威','叶扬帆') NOT NULL COMMENT '物品所有者',
   `name` varchar(50) NOT NULL COMMENT '购买物品名称',
-  `amount` float NOT NULL COMMENT '物品数量',
-  `price` float NOT NULL COMMENT '物品单价',
+  `amount` decimal(10,1) NOT NULL COMMENT '物品数量',
+  `price` decimal(10,1) NOT NULL COMMENT '物品单价',
   PRIMARY KEY (`billId`)
-) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COMMENT='账单表';
+) ENGINE=MyISAM AUTO_INCREMENT=25 DEFAULT CHARSET=utf8 COMMENT='账单表';
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -44,4 +44,4 @@ CREATE TABLE `bill` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2012-09-03  3:40:11
+-- Dump completed on 2012-09-03 15:21:11

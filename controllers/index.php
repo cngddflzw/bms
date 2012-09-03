@@ -8,7 +8,7 @@
             session_start();
             $this->pageData["payerList"] = $this->loadConfig("payerList");
             $this->pageData["ownerList"] = $this->loadConfig("ownerList");
-            $billMod = $this->loadModel("billModel");
+            $billMod = $this->loadModel( "billModel");
 
             if(!empty($_POST)) {
                 $duplicated = $_POST["duplicated"];
@@ -17,13 +17,15 @@
                 // if($duplicated !== null && $duplicated == $_SESSION["duplicated"]) {
                     $bill = $_POST["bill"];
                     $billMod->addBill($bill);
+                    header("Location: /");
                 // }
+            } else {
+                // $_SESSION["duplicated"] = rand(0, 100000);  #防止重复提交
+                // $this->pageData["duplicated"] = $_SESSION["duplicated"];        
+                $billList = $billMod->getBills();
+                $this->pageData["billList"] = $billList;
+                $this->displayView("index", $this->pageData);
             }
-            $_SESSION["duplicated"] = rand(0, 100000);  #防止重复提交
-            $this->pageData["duplicated"] = $_SESSION["duplicated"];        
-            $billList = $billMod->getBills();
-            $this->pageData["billList"] = $billList;
-            $this->displayView("index", $this->pageData);
         }
 
         public function test() {
